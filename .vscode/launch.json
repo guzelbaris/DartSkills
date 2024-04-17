@@ -8,7 +8,8 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "Day1/SwitchCase.dart"
+            "program": "${file}",
+            // to make termianl as "console": "terminal"
         }
     ]
 }

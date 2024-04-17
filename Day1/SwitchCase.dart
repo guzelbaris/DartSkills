@@ -1,6 +1,5 @@
 void main(List<String> args) {
   String LetterGrade="GG";
-
   switch (LetterGrade) {
     case "AA" :
       print("Congralatuions your grade is between 90 - 100");
