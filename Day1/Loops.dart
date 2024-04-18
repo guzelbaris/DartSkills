@@ -17,7 +17,7 @@ void main(List<String> args) {
     else{
       print("Number $i is equal or samller than 5");
       continue;
-      print("The code will not reach here");
+      //print("The code will not reach here");
     }
     print("number is $i");
   }
