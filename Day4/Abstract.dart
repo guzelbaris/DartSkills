@@ -6,7 +6,23 @@
 
 
 void main(List<String> args) {
-  
+  //Shapes shape = Shapes(); // abstract classes are cannot be instantiated directly.
+  Shapes sq = Square(5);
+  Shapes rt = Rectangle(4,5);
+  List<Shapes> shapes = <Shapes>[];
+
+  shapes.add(sq);
+  shapes.add(rt);
+  printer(shapes);
+
+}
+
+void printer(List<Shapes> shapeno){
+  for (Shapes shape in shapeno) {
+    print("${shape.runtimeType.toString()}'s perimeter is: ${shape.perimeter().toString()}");
+    print("${shape.runtimeType.toString()}'s area is: ${shape.area().toString()}");
+    
+  }
 }
 
 // Abstract class created need one abstract method
@@ -33,7 +49,8 @@ class Square extends Shapes {
 class Rectangle extends Shapes {
   int shortside=0;
   int longside=0;
-  
+  Rectangle(this.shortside,this.longside);
+
   @override
   double area() {
     return 2*this.shortside*this.longside.toDouble();
