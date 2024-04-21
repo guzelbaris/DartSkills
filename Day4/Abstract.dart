@@ -7,5 +7,7 @@ void main(List<String> args) {
   
 }
 
-
+abstract class Shapes {
+  
+}
 
