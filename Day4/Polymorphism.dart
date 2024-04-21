@@ -80,6 +80,7 @@ class AdminUser extends NormalUser {
   int level=0;
   @override
   void login(){
+    super.login();
     print("AdminUser logged in");
   }
   void show(){
