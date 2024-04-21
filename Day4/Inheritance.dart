@@ -5,7 +5,7 @@ void main(List<String> args) {
   user1.login();
   user1.invite("Baris", "Guzel");
   user1=null;
-  AdminUser user2=AdminUser(2);
+  AdminUser user2=AdminUser("21",2);
   user2.login();
   user2.show();
   
@@ -52,9 +52,9 @@ class Participant extends User {
   
 }
 
-class AdminUser extends User {
+class AdminUser extends NormalUser {
   int level=0;
-  AdminUser(int this.level){}
+  AdminUser(String id, this.level) : super( id);
   void show(){
     print("${this.level}. Level manager looked how many people attended");
   }
