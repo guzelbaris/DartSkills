@@ -8,6 +8,7 @@ void main(List<String> args) {
   AdminUser user2=AdminUser("21",2);
   user2.login();
   user2.show();
+  user2.invite("Mikail", "Aslan");
   
 
   
@@ -57,6 +58,12 @@ class AdminUser extends NormalUser {
   AdminUser(String id, this.level) : super( id);
   void show(){
     print("${this.level}. Level manager looked how many people attended");
+  }
+  @override
+  void invite(String name, String surname){
+    Participant? participante=Participant(name,surname);
+    print("Admin User with the id ${this.id} invited ${participante.name} ${participante.surname}");
+    participante=null;
   }
   
 }
