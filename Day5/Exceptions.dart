@@ -1,3 +1,5 @@
+import 'dart:math';
+
 void main(List<String> args) {
   try {
     // int num= 16~/0;
@@ -13,4 +15,15 @@ void main(List<String> args) {
   catch (e) {
     print("Error : ${e}");
   }
+}
+
+double takeSquareRoot(int a){
+
+  if(a<0){
+    throw FormatException("Number cannot be negative");
+  }
+  else{
+    return sqrt(a);
+  }
+  
 }
