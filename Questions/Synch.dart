@@ -62,7 +62,7 @@ Future<String> grade(String course) {
       case "Object Oriented Programming":
         return "AA";
       default:
-        throw Exception('Invalid course name: $course');
+        throw Exception('Invalid course: $course');
     }
   });
 }
